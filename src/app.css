@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --white: #ffffff;
+    --purple: #434FC9;
+    --mid-gray: #D9D9D9;
+    --dark-gray: #A4A6AB;
+    --orange: #FD9C4E;
+    --pink: #DE80DB;
+    --pale-black: #212B37;
+    --black: #000000;
+    --gradient: linear-gradient(to right, var(--purple), var(--orange), var(--pink));
+    --reverse-gradient: linear-gradient(to left, var(--purple), var(--orange), var(--pink));
+}
+
+body {
+    /* background: var(--gradient); */
+    /* background-color: var(--mid-gray); */
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: "Rubik", sans-serif;
+}
+
+a.sprot-link {
+    position: relative;
+    height: 1rem;
+    line-height: 100%;
+}
+
+a.sprot-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient);
+}
+
+a.sprot-link:hover::after {
+    background: var(--reverse-gradient);
+}
+
+.sprot-container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+@media screen and (min-width: 576px) {
+    .sprot-container {
+        padding: 0 1rem;
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sprot-container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sprot-container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sprot-container {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .sprot-container {
+        max-width: 1200px;
+    }
+}
+
+.link {
+    @apply px-[18px] pt-[18px] pb-[14px] text-[16px] text-grayish hover:text-orangish;
+}
+
